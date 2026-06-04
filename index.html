@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>瑞霖生技｜品牌設計風格定位建議報告書</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+TC:wght@200;300;400&family=Noto+Sans+TC:wght@300;400;500&display=swap');
+
+:root {
+  --forest: #1C3230;
+  --forest-light: #2A4A47;
+  --ivory: #F5EFE6;
+  --ivory-deep: #EDE5D8;
+  --gold: #BFA07A;
+  --gold-light: #D4BC98;
+  --gold-pale: #F0E8DA;
+  --charcoal: #2C2C2A;
+  --charcoal-mid: #4A4A47;
+  --gray-warm: #888780;
+  --gray-pale: #F1EFE8;
+
+  --rose: #C4748A;
+  --rose-pale: #F5E8ED;
+  --rose-deep: #9A4060;
+  --crimson: #8C3A30;
+  --crimson-pale: #F2E5E3;
+  --crimson-mid: #B55545;
+  --sage: #5A7A6A;
+  --sage-pale: #E3EDE8;
+  --sage-mid: #7A9A8A;
+  --amber-warm: #C8A882;
+  --amber-pale: #F5EDE0;
+  --amber-mid: #B08050;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans TC', 'PingFang TC', sans-serif;
+  background: #FAFAF7;
+  color: var(--charcoal);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ── Cover ── */
+.cover {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--forest);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px;
+  page-break-after: always;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -120px;
+  width: 500px; height: 500px;
+  border: 1px solid rgba(191,160,122,0.15);
+  border-radius: 50%;
+}
+.cover::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: -80px;
+  width: 380px; height: 380px;
+  border: 1px solid rgba(191,160,122,0.10);
+  border-radius: 50%;
+}
+
+.cover-top { display: flex; flex-direction: column; gap: 6px; }
+.cover-label {
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.cover-divider {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+  margin: 24px 0;
+}
+
+.cover-main { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 32px; }
+
+.cover-brand-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 300;
+  color: var(--ivory);
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+.cover-brand-cn {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 22px;
+  font-weight: 200;
+  color: var(--gold);
+  letter-spacing: 0.4em;
+}
+
+.cover-title-zh {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 15px;
+  font-weight: 200;
+  color: rgba(245,239,230,0.7);
+  letter-spacing: 0.2em;
+  line-height: 2;
+}
+
+.cover-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid rgba(191,160,122,0.2);
+  padding-top: 32px;
+}
+
+.cover-meta { font-size: 11px; font-weight: 300; color: rgba(245,239,230,0.45); letter-spacing: 0.12em; line-height: 2; }
+.cover-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 300;
+  color: rgba(191,160,122,0.18);
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+/* ── Layout ── */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 80px;
+}
+
+.page + .page { border-top: 1px solid var(--ivory-deep); }
+
+/* ── Section header ── */
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.eyebrow-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+}
+
+.eyebrow-line {
+  flex: 1;
+  height: 1px;
+  background: var(--ivory-deep);
+}
+
+.eyebrow-tag {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--gray-warm);
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--forest);
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.section-title-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  margin-bottom: 28px;
+}
+
+.section-body {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--charcoal-mid);
+  line-height: 2;
+  margin-bottom: 28px;
+}
+
+/* ── Cards ── */
+.card {
+  background: white;
+  border: 1px solid var(--ivory-deep);
+  border-radius: 12px;
+  padding: 24px 28px;
+}
+
+.card-forest {
+  background: var(--forest);
+  border-color: var(--forest-light);
+}
+
+.card-ivory {
+  background: var(--ivory);
+  border-color: var(--ivory-deep);
+}
+
+.highlight-bar {
+  background: var(--gold-pale);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.9;
+}
+
+/* ── Grid ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 12px; }
+
+/* ── Archetype ── */
+.archetype-card {
+  background: white;
+  border: 1px solid var(--ivory-deep);
+  border-radius: 12px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.archetype-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+
+.archetype-card.sage::before { background: linear-gradient(90deg, var(--forest), var(--sage)); }
+.archetype-card.caregiver::before { background: linear-gradient(90deg, var(--rose-deep), var(--rose)); }
+
+.archetype-symbol {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  color: var(--gold);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.archetype-name-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--forest);
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+
+.archetype-name-zh {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.archetype-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--charcoal-mid);
+  line-height: 1.9;
+}
+
+.archetype-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.kw-tag {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--ivory-deep);
+  color: var(--gray-warm);
+}
+
+/* ── Positioning matrix ── */
+.matrix-item { margin-bottom: 20px; }
+.matrix-label-row { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.matrix-label { font-size: 12px; font-weight: 400; color: var(--charcoal); letter-spacing: 0.05em; }
+.matrix-ends { font-size: 10px; font-weight: 300; color: var(--gray-warm); letter-spacing: 0.1em; }
+.matrix-track {
+  height: 4px;
+  background: var(--ivory-deep);
+  border-radius: 4px;
+  position: relative;
+}
+.matrix-fill {
+  height: 4px;
+  border-radius: 4px;
+  position: absolute;
+  left: 0; top: 0;
+}
+.matrix-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  position: absolute;
+  top: -3px;
+  transform: translateX(-50%);
+  border: 2px solid white;
+  box-shadow: 0 0 0 1px var(--gold);
+}
+
+/* ── Color palette ── */
+.color-system { margin-bottom: 36px; }
+.color-system-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--gray-warm);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.swatch-row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.swatch-item { display: flex; flex-direction: column; gap: 6px; }
+.swatch-block {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.swatch-block.small {
+  width: 48px;
+  height: 48px;
+}
+
+.swatch-text { font-size: 10px; font-weight: 300; color: var(--charcoal-mid); line-height: 1.5; }
+.swatch-hex { font-size: 9px; color: var(--gray-warm); font-family: 'Courier New', monospace; }
+
+/* ── Series cards ── */
+.series-card {
+  border-radius: 14px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid var(--ivory-deep);
+}
+
+.series-header {
+  padding: 28px 28px 20px;
+  position: relative;
+}
+
+.series-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 28px; right: 28px;
+  height: 1px;
+  background: var(--ivory-deep);
+}
+
+.series-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.series-zh {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.series-body { padding: 20px 28px 24px; }
+
+.series-row { display: flex; gap: 6px; margin-bottom: 8px; align-items: flex-start; }
+.series-row-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--gray-warm);
+  white-space: nowrap;
+  padding-top: 2px;
+  min-width: 60px;
+}
+.series-row-val {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--charcoal-mid);
+  line-height: 1.8;
+}
+
+.series-accent-bar { height: 4px; }
+
+/* ── Typography specimens ── */
+.type-specimen {
+  background: white;
+  border: 1px solid var(--ivory-deep);
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 14px;
+}
+
+.specimen-label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--gray-warm);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.specimen-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--ivory-deep);
+}
+
+/* ── Logotype direction ── */
+.logo-demo {
+  background: white;
+  border: 1px solid var(--ivory-deep);
+  border-radius: 14px;
+  padding: 36px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.logo-demo-dark {
+  background: var(--forest);
+}
+
+.logo-demo-label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: var(--gray-warm);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.logo-demo-dark .logo-demo-label { color: rgba(191,160,122,0.5); }
+
+/* Series logotype demos */
+.logotype-fibra {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: var(--rose-deep);
+  line-height: 1;
+}
+
+.logotype-fibra-sub {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  color: var(--rose);
+  margin-top: 8px;
+}
+
+.logotype-angel {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--ivory);
+  line-height: 1;
+}
+
+.logotype-angel-sub {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  color: var(--gold);
+  margin-top: 8px;
+}
+
+.logotype-xiaji {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.12em;
+  color: var(--sage);
+  line-height: 1;
+}
+
+.logotype-xiaji-sub {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.5em;
+  color: var(--sage-mid);
+  margin-top: 8px;
+}
+
+.logotype-parent {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--ivory);
+  line-height: 1;
+}
+
+.logotype-parent-cn {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 13px;
+  font-weight: 200;
+  letter-spacing: 0.6em;
+  color: var(--gold);
+  margin-top: 10px;
+}
+
+.logotype-parent-sub {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  color: rgba(191,160,122,0.6);
+  margin-top: 6px;
+}
+
+/* ── Packaging concept ── */
+.pack-concept {
+  background: white;
+  border: 1px solid var(--ivory-deep);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.pack-visual {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bottle-shape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.bottle-cap {
+  width: 28px;
+  height: 18px;
+  border-radius: 4px 4px 0 0;
+}
+
+.bottle-neck {
+  width: 22px;
+  height: 22px;
+}
+
+.bottle-shoulder {
+  width: 70px;
+  height: 20px;
+  border-radius: 35px 35px 0 0;
+}
+
+.bottle-body {
+  width: 80px;
+  height: 100px;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottle-label-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.pack-info { padding: 18px 22px 22px; border-top: 1px solid var(--ivory-deep); }
+.pack-series-name { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; margin-bottom: 4px; }
+.pack-product-name { font-size: 14px; font-weight: 400; color: var(--charcoal); margin-bottom: 10px; }
+.pack-details { font-size: 11px; font-weight: 300; color: var(--gray-warm); line-height: 1.9; }
+
+/* ── Reference brands ── */
+.brand-ref {
+  background: white;
+  border: 1px solid var(--ivory-deep);
+  border-radius: 12px;
+  padding: 20px 22px;
+}
+
+.brand-ref-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--forest);
+  margin-bottom: 2px;
+}
+
+.brand-ref-region {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.brand-ref-why {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--charcoal-mid);
+  line-height: 1.8;
+}
+
+.brand-ref-tag {
+  display: inline-block;
+  font-size: 9px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  margin-top: 8px;
+  letter-spacing: 0.08em;
+}
+
+/* ── Table ── */
+.info-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+.info-table td {
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--charcoal-mid);
+  border-bottom: 1px solid var(--ivory-deep);
+  vertical-align: top;
+  line-height: 1.8;
+}
+.info-table td:first-child {
+  font-weight: 400;
+  color: var(--charcoal);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  width: 120px;
+}
+
+/* ── TOC ── */
+.toc-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--ivory-deep);
+}
+
+.toc-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: var(--gold);
+  min-width: 28px;
+}
+
+.toc-title {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--charcoal);
+  letter-spacing: 0.05em;
+  flex: 1;
+}
+
+.toc-dots {
+  flex: 1;
+  border-bottom: 1px dotted var(--ivory-deep);
+  margin: 0 8px;
+  margin-bottom: 4px;
+}
+
+.toc-page {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: var(--gray-warm);
+}
+
+/* ── Note box ── */
+.note-box {
+  background: var(--forest);
+  border-radius: 12px;
+  padding: 24px 28px;
+  color: var(--ivory);
+  margin-top: 28px;
+}
+
+.note-box-label {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.note-box p {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(245,239,230,0.8);
+  line-height: 2;
+}
+
+/* ── Steps ── */
+.step-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+  align-items: flex-start;
+}
+
+.step-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  min-width: 32px;
+}
+
+.step-content { flex: 1; }
+.step-title { font-size: 15px; font-weight: 500; color: var(--forest); margin-bottom: 4px; letter-spacing: 0.03em; }
+.step-desc { font-size: 13px; font-weight: 300; color: var(--charcoal-mid); line-height: 1.9; }
+
+/* ── Footer ── */
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 80px;
+  border-top: 1px solid var(--ivory-deep);
+  background: var(--gray-pale);
+}
+
+.footer-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: var(--gray-warm);
+  letter-spacing: 0.12em;
+}
+
+.footer-meta { font-size: 10px; font-weight: 300; color: var(--gray-warm); letter-spacing: 0.08em; }
+
+/* ── Dividers ── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ivory-deep), transparent);
+  margin: 56px 0;
+}
+
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-pale), var(--gold-light), var(--gold-pale));
+  margin: 40px 0;
+}
+
+/* ── Print ── */
+@media print {
+  .cover { min-height: 100vh; }
+  .page { page-break-before: auto; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ═══ COVER ═══ -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="cover-label">Brand Visual Identity Report</div>
+    <div class="cover-label" style="letter-spacing:0.15em;font-size:9px;color:rgba(191,160,122,0.5)">Design Direction & Style Positioning</div>
+  </div>
+
+  <div class="cover-main">
+    <div>
+      <div class="cover-brand-en">Rueilin Biotech</div>
+      <div class="cover-brand-cn">瑞　霖　生　技</div>
+    </div>
+
+    <div class="cover-divider"></div>
+
+    <div>
+      <div class="cover-title-zh">品牌設計風格定位建議報告書</div>
+      <div class="cover-title-zh" style="font-size:11px;color:rgba(245,239,230,0.35);letter-spacing:0.25em">三大系列品牌標準字與視覺系統規劃</div>
+    </div>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cover-meta">
+      <div>機密文件｜僅供授權人員閱覽</div>
+      <div>製作單位｜鹿氏設計 Mooser Design</div>
+      <div>版本｜V1.0 Draft · 2025</div>
+    </div>
+    <div class="cover-year"></div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: 目錄 ═══ -->
+<div class="page" style="padding-top:72px;padding-bottom:72px">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">00</span>
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-tag">Contents</span>
+  </div>
+  <div class="section-title">目錄</div>
+  <div class="section-title-en">Table of Contents</div>
+
+  <div>
+    <div class="toc-item">
+      <span class="toc-num">01</span>
+      <span class="toc-title">品牌背景與專案概述</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">02</span>
+      <span class="toc-title">品牌人格與市場定位</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">03</span>
+      <span class="toc-title">視覺定位矩陣</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">04</span>
+      <span class="toc-title">品牌色彩系統</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">05</span>
+      <span class="toc-title">字體與排版策略</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">06</span>
+      <span class="toc-title">三大系列品牌定位與標準字方向</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">07</span>
+      <span class="toc-title">四款商品包裝視覺策略</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">08</span>
+      <span class="toc-title">包裝設計語彙要素</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">09</span>
+      <span class="toc-title">品牌參考標竿</span>
+      <span class="toc-dots"></span>
+    </div>
+    <div class="toc-item">
+      <span class="toc-num">10</span>
+      <span class="toc-title">後續執行建議與里程碑</span>
+      <span class="toc-dots"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: 01 品牌背景 ═══ -->
+<div class="page">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">01</span>
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-tag">Brand Overview</span>
+  </div>
+  <div class="section-title">品牌背景與專案概述</div>
+  <div class="section-title-en">Brand Background & Project Brief</div>
+
+  <div class="section-body">
+    瑞霖生技工坊是一家以台灣為生產基地、以快速見效與獨家配方為核心競爭力的保健品牌，商品涵蓋體型管理、能量提振、皮膚調理及膠原美容等多元保健需求。本次設計專案的核心任務，是在品牌視覺風格尚未明確建立的前提下，系統性地為品牌及旗下三大系列建立統一的設計語言與包裝視覺方向，為後續台灣美容通路鋪貨及東南亞外銷奠定品牌資產。
+  </div>
+
+  <table class="info-table">
+    <tr>
+      <td>公司名稱</td>
+      <td>瑞霖生技工坊有限公司</td>
+    </tr>
+    <tr>
+      <td>品牌英文</td>
+      <td>Rueilin Biotech</td>
+    </tr>
+    <tr>
+      <td>產地</td>
+      <td>台灣</td>
+    </tr>
+    <tr>
+      <td>主要通路</td>
+      <td>美容美體業者（個人工作室、美容 SPA）、醫療院所（中醫、醫美、皮膚科）</td>
+    </tr>
+    <tr>
+      <td>外銷市場</td>
+      <td>東南亞（馬來西亞、越南、新加坡）、非洲、奧地利</td>
+    </tr>
+    <tr>
+      <td>目標客群</td>
+      <td>25–60 歲女性為主，美容師佔主要通路推薦者（45–55 歲個人工作室為核心）</td>
+    </tr>
+    <tr>
+      <td>品牌核心優勢</td>
+      <td>成效快速（30 分鐘至 3 天可感受）、獨家配方 Know-how、台灣製造、100% 無添加</td>
+    </tr>
+    <tr>
+      <td>專案目的</td>
+      <td>建立品牌視覺識別、三大系列標準字設計、四款商品包裝視覺方向定稿</td>
+    </tr>
+  </table>
+
+  <div class="highlight-bar">
+    本次品牌升級最核心目的：<strong>強化專業信任感</strong>，並為東南亞外銷建立具有國際競爭力的視覺包裝系統。設計需同時滿足台灣美容師通路的質感期待，以及東南亞市場對「高端亞洲保健品」的審美認知。
+  </div>
+</div>
+
+<!-- ═══ PAGE: 02 品牌人格 ═══ -->
+<div class="page">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">02</span>
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-tag">Brand Archetype</span>
+  </div>
+  <div class="section-title">品牌人格與市場定位</div>
+  <div class="section-title-en">Brand Archetype & Market Positioning</div>
+
+  <div class="section-body">
+    根據業主訪談，瑞霖生技的品牌人格結合了「智者 Sage」與「守護者 Caregiver」兩種原型。這兩個原型並不矛盾，而是共同建構出品牌的核心張力：以智識與專業建立信任，以溫柔與關懷驅動購買。視覺語言應將兩者融合，呈現「有溫度的精準」。
+  </div>
+
+  <div class="grid-2" style="margin-bottom:28px">
+    <div class="archetype-card sage">
+      <div class="archetype-symbol">✦</div>
+      <div class="archetype-name-en">The Sage</div>
+      <div class="archetype-name-zh">智　者</div>
+      <div class="archetype-desc">
+        以專業、精準、可驗證的科學依據建立信任。品牌相信「真相讓人自由」，強調成效的可感知性與成分的可溯源性。視覺上呈現秩序、留白與精準，排除一切多餘的裝飾。
+      </div>
+      <div class="archetype-keywords">
+        <span class="kw-tag">精準有效</span>
+        <span class="kw-tag">專業可信</span>
+        <span class="kw-tag">成分透明</span>
+        <span class="kw-tag">知識感</span>
+        <span class="kw-tag">秩序留白</span>
+      </div>
+    </div>
+
+    <div class="archetype-card caregiver">
+      <div class="archetype-symbol">◎</div>
+      <div class="archetype-name-en">The Caregiver</div>
+      <div class="archetype-name-zh">守　護　者</div>
+      <div class="archetype-desc">
+        以溫柔、安全、無毒的姿態關懷使用者的身體與情感。品牌相信每一個女性都值得被好好照顧，視覺上呈現有機曲線、植萃意象與柔和色調，讓人在第一眼就感到被呵護。
+      </div>
+      <div class="archetype-keywords">
+        <span class="kw-tag">溫柔關懷</span>
+        <span class="kw-tag">安全無毒</span>
+        <span class="kw-tag">植萃自然</span>
+        <span class="kw-tag">有機感</span>
+        <span class="kw-tag">被守護感</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-bar">
+    <strong>整體視覺比例策略：理性骨架 × 感性皮膚</strong><br>
+    結構與排版走精準高端保健品路線（大量留白、對稱構圖、細挺無衬線字體），色彩與材質細節走溫潤女性護膚品路線（裸粉、玫瑰金、深森綠、霧面材質），呈現「有漢方溫度的現代精準保健品牌」。感性 70% · 理性 30%。
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="section-body" style="margin-bottom:12px">
+    <strong style="font-weight:500">品牌核心形容詞（Brand Character Words）</strong>
+  </div>
+
+  <div class="grid-3">
+    <div class="card card-ivory" style="text-align:center;padding:20px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--forest);letter-spacing:0.1em;margin-bottom:4px">有效的</div>
+      <div style="font-size:10px;letter-spacing:0.2em;color:var(--gray-warm)">Effective</div>
+    </div>
+    <div class="card card-ivory" style="text-align:center;padding:20px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--forest);letter-spacing:0.1em;margin-bottom:4px">清爽的</div>
+      <div style="font-size:10px;letter-spacing:0.2em;color:var(--gray-warm)">Pure & Fresh</div>
+    </div>
+    <div class="card card-ivory" style="text-align:center;padding:20px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--forest);letter-spacing:0.1em;margin-bottom:4px">無毒的</div>
+      <div style="font-size:10px;letter-spacing:0.2em;color:var(--gray-warm)">Clean & Safe</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: 03 定位矩陣 ═══ -->
+<div class="page">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">03</span>
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-tag">Positioning Matrix</span>
+  </div>
+  <div class="section-title">視覺定位矩陣</div>
+  <div class="section-title-en">Brand Visual Positioning Matrix</div>
+
+  <div class="section-body">
+    以下四個維度定義瑞霖生技在競爭市場中的視覺坐標。這些定位決策將直接影響色彩選擇、材質表現、插圖風格與字體選用的所有設計決策。
+  </div>
+
+  <div style="max-width:600px;margin:0 auto">
+
+    <div class="matrix-item">
+      <div class="matrix-label-row">
+        <span class="matrix-label">感性 ↔ 理性比重</span>
+        <span class="matrix-ends">70% 感性</span>
+      </div>
+      <div class="matrix-track">
+        <div class="matrix-fill" style="width:70%;background:linear-gradient(90deg,var(--rose),var(--rose-deep))"></div>
+        <div class="matrix-dot" style="left:70%"></div>
+      </div>
+      <div class="matrix-ends" style="margin-top:4px"><span>感性 Emotional</span><span>理性 Rational</span></div>
+    </div>
+
+    <div class="matrix-item">
+      <div class="matrix-label-row">
+        <span class="matrix-label">平價 ↔ 高端定位</span>
+        <span class="matrix-ends">高端質感</span>
+      </div>
+      <div class="matrix-track">
+        <div class="matrix-fill" style="width:83%;background:linear-gradient(90deg,var(--sage-mid),var(--forest))"></div>
+        <div class="matrix-dot" style="left:83%"></div>
+      </div>
+      <div class="matrix-ends" style="margin-top:4px"><span>平價 Accessible</span><span>高端 Premium</span></div>
+    </div>
+
+    <div class="matrix-item">
+      <div class="matrix-label-row">
+        <span class="matrix-label">大眾 ↔ 專業通路</span>
+        <span class="matrix-ends">專業通路為主</span>
+      </div>
+      <div class="matrix-track">
+        <div class="matrix-fill" style="width:75%;background:linear-gradient(90deg,var(--gold-light),var(--gold))"></div>
+        <div class="matrix-dot" style="left:75%"></div>
+      </div>
+      <div class="matrix-ends" style="margin-top:4px"><span>大眾 Mass Market</span><span>專業 Professional</span></div>
+    </div>
+
+    <div class="matrix-item">
+      <div class="matrix-label-row">
+        <span class="matrix-label">傳統漢方 ↔ 現代科技</span>
+        <span class="matrix-ends">現代中帶漢方溫度</span>
+      </div>
+      <div class="matrix-track">
+        <div class="matrix-fill" style="width:60%;background:linear-gradient(90deg,var(--amber-mid),var(--charcoal))"></div>
+        <div class="matrix-dot" style="left:60%"></div>
+      </div>
+      <div class="matrix-ends" style="margin-top:4px"><span>傳統 Traditional</span><span>現代 Modern</span></div>
+    </div>
+
+    <div class="matrix-item">
+      <div class="matrix-label-row">
+        <span class="matrix-label">視覺強度</span>
+        <span class="matrix-ends">強烈深刻</span>
+      </div>
+      <div class="matrix-track">
+        <div class="matrix-fill" style="width:80%;background:linear-gradient(90deg,#aaa,var(--charcoal))"></div>
+        <div class="matrix-dot" style="left:80%"></div>
+      </div>
+      <div class="matrix-ends" style="margin-top:4px"><span>柔和 Soft</span><span>強烈 Bold</span></div>
+    </div>
+
+  </div>
+
+  <div class="note-box" style="margin-top:36px">
+    <div class="note-box-label">定位結論 Positioning Conclusion</div>
+    <p>瑞霖生技應以「有漢方溫度的現代精準保健品牌」作為視覺定位核心，既不走傳統中藥舖的古典感，也不落入西方白牌保健品的冷峻感。目標是讓美容師第一眼覺得「這個可以放在我的工作室」，讓東南亞消費者第一眼覺得「這是值得信賴的亞洲高端品牌」。</p>
+  </div>
+</div>
+
+<!-- ═══ PAGE: 04 色彩系統 ═══ -->
+<div class="page">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">04</span>
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-tag">Color System</span>
+  </div>
+  <div class="section-title">品牌色彩系統</div>
+  <div class="section-title-en">Brand Color Architecture</div>
+
+  <div class="section-body">
+    建議採用三層色彩架構：品牌主調色（跨三大系列共用）、各系列功能識別色（每系列專屬色調）、中性底色（共用底層）。包裝統一底色後，以系列識別色作視覺區分，維持強烈系列感同時保持品項辨識度。
+  </div>
+
+  <!-- Primary palette -->
+  <div class="color-system">
+    <div class="color-system-label">品牌主調色 — 跨系列共用 Primary Brand Colors</div>
+    <div class="swatch-row">
+      <div class="swatch-item">
+        <div class="swatch-block" style="background:#1C3230"></div>
+        <div class="swatch-text">深森綠<br>Deep Forest</div>
+        <div class="swatch-hex">#1C3230</div>
+      </div>
+      <div class="swatch-item">
+        <div class="swatch-block" style="background:#F5EFE6"></div>
+        <div class="swatch-text">裸米白<br>Ivory Nude</div>
+        <div class="swatch-hex">#F5EFE6</div>
+      </div>
+      <div class="swatch-item">
+        <div class="swatch-block" style="background:#BFA07A"></div>
+        <div class="swatch-text">玫瑰金<br>Rose Gold</div>
+        <div class="swatch-hex">#BFA07A</div>
+      </div>
+      <div class="swatch-item">
+        <div class="swatch-block" style="background:#2C2C2A"></div>
+        <div class="swatch-text">墨炭<br>Charcoal</div>
+        <div class="swatch-hex">#2C2C2A</div>
+      </div>
+      <div class="swatch-item">
+        <div class="swatch-block" style="background:#D4BC98"></div>
+        <div class="swatch-text">淡金<br>Pale Gold</div>
+        <div class="swatch-hex">#D4BC98</div>
+      </div>
+    </div>
+    <div style="font-size:11px;font-weight:300;color:var(--gray-warm);margin-top:10px;line-height:1.8">
+      深森綠作為主視覺背景色（品牌形象深色版）；裸米白作為主視覺背景色（品牌形象淺色版）；玫瑰金作為品牌裝飾線條、燙印工藝及點綴用途；墨炭用於所有文字排版。
+    </div>
+  </div>
+
+  <div class="gold-divider"></div>
+
+  <!-- Series colors -->
+  <div class="color-system">
+    <div class="color-system-label">系列識別色 — 各系列專屬 Series Accent Colors</div>
+    <div class="grid-3" style="gap:16px">
+
+      <div>
+        <div style="font-size:11px;font-weight:500;color:var(--rose-deep);letter-spacing:0.12em;margin-bottom:10px">纖世代 FIBRA</div>
+        <div class="swatch-row">
+          <div class="swatch-item">
+            <div class="swatch-block small" style="background:#C4748A"></div>
+            <div class="swatch-text">玫瑰茶粉</div>
+            <div class="swatch-hex">#C4748A</div>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-block small" style="background:#9A4060"></div>
+            <div class="swatch-text">深玫瑰</div>
+            <div class="swatch-hex">#9A4060</div>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-block small" style="background:#F5E8ED"></div>
+            <div class="swatch-text">粉霧白</div>
+            <div class="swatch-hex">#F5E8ED</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;font-weight:500;color:var(--crimson);letter-spacing:0.12em;margin-bottom:10px">大天使 ARCHANGEL</div>
+        <div class="swatch-row">
+          <div class="swatch-item">
+            <div class="swatch-block small" style="background:#8C3A30"></div>
+            <div class="swatch-text">藏紅</div>
+            <div class="swatch-hex">#8C3A30</div>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-block small" style="background:#B55545"></div>
+            <div class="swatch-text">硃砂</div>
+            <div class="swatch-hex">#B55545</div>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-block small" style="background:#F2E5E3"></div>
+            <div class="swatch-text">陶瓷白</div>
+            <div class="swatch-hex">#F2E5E3</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;font-weight:500;color:var(--sage);letter-spacing:0.12em;margin-bottom:10px">夏姬 XIAJI</div>
+        <div class="swatch-row">
+          <div class="swatch-item">
+            <div class="swatch-block small" style="background:#5A7A6A"></div>
+            <div class="swatch-text">薄荷蒼綠</div>
+            <div class="swatch-hex">#5A7A6A</div>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-block small" style="background:#C8A882"></div>
+            <div class="swatch-text">透明金</div>
+            <div class="swatch-hex">#C8A882</div>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-block small" style="background:#E3EDE8"></div>
+            <div class="swatch-text">薄荷霧</div>
+            <div class="swatch-hex">#E3EDE8</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="highlight-bar">
+    <strong>包裝應用規則：</strong>四款商品包裝建議共用深森綠或裸米白雙底色版本，玫瑰金作為金屬燙印或壓紋裝飾，各系列識別色用於標籤色帶、植物插圖主色調或局部色塊，確保上架陳列時系列感強烈，個品辨識一眼清晰。
+  </div>
+</div>
+
+<!-- ═══ PAGE: 05 字體 ═══ -->
+<div class="page">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">05</span>
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-tag">Typography</span>
+  </div>
+  <div class="section-title">字體與排版策略</div>
+  <div class="section-title-en">Typography & Layout System</div>
+
+  <div class="section-body">
+    品牌字體系統建議採用「英文 Serif 主字 + 中文細挺字 + 功能性無衬線輔助字」三層架構，各層功能明確，確保跨包裝、跨媒材的一致視覺氣質。
+  </div>
+
+  <!-- English Serif -->
+  <div class="type-specimen">
+    <div class="specimen-label">主字體 — 英文 Serif（品牌名稱／系列名稱）</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--forest);letter-spacing:0.12em;line-height:1.2">
+      Rueilin Biotech
+    </div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;font-style:italic;color:var(--gold);letter-spacing:0.15em;margin-top:8px">
+      Traditional wisdom · Modern precision
+    </div>
+    <div style="margin-top:14px;font-size:11px;font-weight:300;color:var(--gray-warm);line-height:1.8">
+      建議字體：Cormorant Garamond Light / Regular · 或 Playfair Display Light<br>
+      應用場景：品牌主標、系列英文名、包裝標題、品牌形象物料
+    </div>
+  </div>
+
+  <!-- Chinese -->
+  <div class="type-specimen">
+    <div class="specimen-label">中文字體 — 細挺細明體（品牌中文名稱）</div>
+    <div style="font-family:'Noto Serif TC',serif;font-size:32px;font-weight:200;color:var(--forest);letter-spacing:0.5em;line-height:1.4">
+      瑞　霖　生　技
+    </div>
+    <div style="font-family:'Noto Serif TC',serif;font-size:16px;font-weight:200;color:var(--gold);letter-spacing:0.4em;margin-top:10px">
+      纖　世　代 ／ 大　天　使 ／ 夏　姬
+    </div>
+    <div style="margin-top:14px;font-size:11px;font-weight:300;color:var(--gray-warm);line-height:1.8">
+      建議字體：Noto Serif TC ExtraLight · 或思源宋體 Light，字距加大 0.4–0.6em<br>
+      應用場景：品牌中文名稱、系列中文名稱、包裝中文標題
+    </div>
+  </div>
+
+  <!-- Functional sans -->
+  <div class="type-specimen">
+    <div class="specimen-label">功能字體 — 無衬線細字（說明文字／成分標示）</div>
+    <div style="font-family:'Noto Sans TC',sans-serif;font-size:13px;font-weight:300;color:var(--charcoal-mid);letter-spacing:0.08em;line-height:2">
+      100% 無添加  ·  完全無味道  ·  溶解速度超快<br>
+      BIOACTIVE FORMULA  ·  MADE IN TAIWAN  ·  60 CAPSULES
+    </div>
+    <div style="font-family:'Noto Sans TC',sans-serif;font-size:10px;font-weight:500;color:var(--gray-warm);letter-spacing:0.3em;text-transform:uppercase;margin-top:12px">
+      Ingredients · Directions · Cautions · Net Weight
+    </div>
+    <div style="margin-top:14px;font-size:11px;font-weight:300;color:var(--gray-warm);line-height:1.8">
+      建議字體：Noto Sans TC Light / Regular<br>
+      應用場景：成分說明、使用方式、注意事項、規格資訊等包裝背面文字
+    </div>
+  </div>
+
+  <div class="highlight-bar">
+    <strong>排版核心原則：</strong>避免資訊堆疊，以「稀為貴」的原則配置版面。英文字體加大字距（tracking 0.1–0.2em），中文字體加大字距（0.3–0.5em），製造高端呼吸感。正面包裝資訊量控制在 3–5 個視覺元素以內（Logo、系列名、商品名、一句核心賣點、視覺插圖）。
+  </div>
+</div>
+
+<!-- ═══ PAGE: 06 三大系列 ═══ -->
+<div class="page">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">06</span>
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-tag">Three Series Identity</span>
+  </div>
+  <div class="section-title">三大系列品牌定位與標準字方向</div>
+  <div class="section-title-en">Series Brand Identity & Logotype Direction</div>
+
+  <div class="section-body">
+    瑞霖生技旗下三大系列各有明確的市場定位與目標族群，標準字設計應在「母品牌統一語彙」之下，各自發展出符合系列個性的字形個性，做到「看得出是同一家，也認得出是哪個系列」。
+  </div>
+
+  <!-- 纖世代 -->
+  <div class="series-card" style="margin-bottom:20px">
+    <div class="series-accent-bar" style="background:linear-gradient(90deg,#C4748A,#9A4060)"></div>
+    <div class="series-header">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;color:var(--rose);margin-bottom:6px">SERIES 01</div>
+          <div class="series-en" style="color:var(--rose-deep)">FIBRA</div>
+          <div class="series-zh" style="color:var(--rose)">纖世代｜體型雕塑系列</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:10px;font-weight:300;color:var(--gray-warm);line-height:1.9">目標客群<br>25–50 歲女性<br>體態管理需求者</div>
+        </div>
+      </div>
+    </div>
+    <div class="series-body">
+      <div class="grid-2">
+        <div>
+          <div class="series-row">
+            <span class="series-row-label">系列定義</span>
+            <span class="series-row-val">以體型雕塑、體態管理為主的所有商品，如玫瑰油切茶等。</span>
+          </div>
+          <div class="series-row">
+            <span class="series-row-label">品牌個性</span>
+            <span class="series-row-val">浪漫、輕盈、有自信。讓女性感到「優雅地管理自己」而非「痛苦地節食」。</span>
+          </div>
+          <div class="series-row">
+            <span class="series-row-label">視覺調性</span>
+            <span class="series-row-val">日系輕奢感，柔和玫瑰色系，植萃花卉水彩插圖，細挺字體。</span>
+          </div>
+        </div>
+        <div>
+          <div class="series-row">
+            <span class="series-row-label">標準字方向</span>
+            <span class="series-row-val">FIBRA — 建議採用 Cormorant Garamond Regular 或 Playfair Display，字距稍大，呈現修長優雅感。可考慮 F 與 I 做連字設計（ligature）增加識別感。</span>
+          </div>
+          <div class="series-row">
+            <span class="series-row-label">中文輔助字</span>
+            <span class="series-row-val">「纖世代」採細明宋體字，字距加大，搭配英文 FIBRA 垂直排列。</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logotype demo -->
+      <div style="background:var(--rose-pale);border-radius:10px;padding:28px 32px;margin-top:16px">
+        <div style="font-size:9px;letter-spacing:0.2em;color:var(--rose);margin-bottom:16px;font-weight:500">LOGOTYPE DIRECTION MOCKUP</div>
+        <div class="logotype-fibra">FIBRA</div>
+        <div class="logotype-fibra-sub">纖　世　代　｜　BODY SCULPTING SERIES</div>
+        <div style="font-family:'Noto Sans TC',sans-serif;font-size:9px;letter-spacing:0.25em;color:var(--rose-deep);opacity:0.5;margin-top:12px">RUEILIN BIOTECH · TAIWAN</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 大天使 -->
+  <div class="series-card" style="margin-bottom:20px">
+    <div class="series-accent-bar" style="background:linear-gradient(90deg,#8C3A30,#5A2010)"></div>
+    <div class="series-header" style="background:var(--forest)">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;color:var(--crimson-mid);margin-bottom:6px">SERIES 02</div>
+          <div class="series-en" style="color:var(--ivory)">ARCHANGEL</div>
+          <div class="series-zh" style="color:var(--gold)">大天使｜保健強化系列</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:10px;font-weight:300;color:rgba(245,239,230,0.5);line-height:1.9">目標客群<br>40–60 歲熟齡<br>能量、睡眠、循環需求者</div>
+        </div>
+      </div>
+    </div>
+    <div class="series-body">
+      <div class="grid-2">
+        <div>
+          <div class="series-row">
+            <span class="series-row-label">系列定義</span>
+            <span class="series-row-val">以能量補充、保健強化為主的所有商品，如紅景天等，未來可延伸助眠、抗壓等品項。</span>
+          </div>
+          <div class="series-row">
+            <span class="series-row-label">品牌個性</span>
+            <span class="series-row-val">力量、莊嚴、快速有效。強調成效的即時感（30 分鐘內有效）與稀有成分的珍貴感。</span>
+          </div>
+          <div class="series-row">
+            <span class="series-row-label">視覺調性</span>
+            <span class="series-row-val">深色奢華感，藏紅與墨炭配色，西藏山脈或紅景天植物線稿，金色燙印。</span>
+          </div>
+        </div>
+        <div>
+          <div class="series-row">
+            <span class="series-row-label">標準字方向</span>
+            <span class="series-row-val">ARCHANGEL — 建議採用 Cormorant Garamond Medium 或稍帶重量感的 Serif，字距適中，呈現莊嚴有力度感。可考慮字母 A 做特殊設計，呼應「天使翅膀」意象。</span>
+          </div>
+          <div class="series-row">
+            <span class="series-row-label">中文輔助字</span>
+            <span class="series-row-val">「大天使」採細宋體，字距加大，搭配金色英文 ARCHANGEL 水平排列。</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--forest);border-radius:10px;padding:28px 32px;margin-top:16px">
+        <div style="font-size:9px;letter-spacing:0.2em;color:var(--gold);margin-bottom:16px;font-weight:500;opacity:0.6">LOGOTYPE DIRECTION MOCKUP</div>
+        <div class="logotype-angel">ARCHANGEL</div>
+        <div class="logotype-angel-sub">大　天　使　｜　VITALITY SERIES</div>
+        <div style="font-family:'Noto Sans TC',sans-serif;font-size:9px;letter-spacing:0.25em;color:var(--gold);opacity:0.35;margin-top:12px">RUEILIN BIOTECH · TAIWAN</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 夏姬 -->
+  <div class="series-card">
+    <div class="series-accent-bar" style="background:linear-gradient(90deg,#5A7A6A,#3A5A4A)"></div>
+    <div class="series-header">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;color:var(--sage);margin-bottom:6px">SERIES 03</div>
+          <div class="series-en" style="color:var(--sage)">XIAJI</div>
+          <div class="series-zh" style="color:var(--sage-mid)">夏姬｜女性美容系列</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:10px;font-weight:300;color:var(--gray-warm);line-height:1.9">目標客群<br>15–50 歲女性<br>皮膚調理、膠原美容需求者</div>
+        </div>
+      </div>
+    </div>
+    <div class="series-body">
+      <div class="grid-2">
+        <div>
+          <div class="series-row">
+            <span class="series-row-label">系列定義</span>
+            <span class="series-row-val">以女性市場為主的所有美容保健商品，如「不要逗留」膠囊、膠原蛋白等，未來可延伸更多女性護膚保健品項。</span>
+          </div>
+          <div class="series-row">
+            <span class="series-row-label">品牌個性</span>
+            <span class="series-row-val">清透、純粹、科學感中帶溫柔。讓女性感到「這是懂我的保健品」。</span>
+          </div>
+          <div class="series-row">
+            <span class="series-row-label">視覺調性</span>
+            <span class="series-row-val">清爽薄荷系，透明感設計語言，植物細線稿，可搭配金色點綴，呈現「純粹但有質感」。</span>
+          </div>
+        </div>
+        <div>
+          <div class="series-row">
+            <span class="series-row-label">標準字方向</span>
+            <span class="series-row-val">XIAJI — 建議採用 Cormorant Garamond Light Italic，斜體帶來女性化的流動感，字距加大。亦可考慮以 X 做特殊設計元素，增加品牌記憶點。</span>
+          </div>
+          <div class="series-row">
+            <span class="series-row-label">中文輔助字</span>
+            <span class="series-row-val">「夏姬」採細明體，字距加大，與斜體英文 XIAJI 形成剛柔對比，產生設計張力。</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--sage-pale);border-radius:10px;padding:28px 32px;margin-top:16px">
+        <div style="font-size:9px;letter-spacing:0.2em;color:var(--sage);margin-bottom:16px;font-weight:500">LOGOTYPE DIRECTION MOCKUP</div>
+        <div class="logotype-xiaji">XIAJI</div>
+        <div class="logotype-xiaji-sub">夏　姬　｜　WOMEN'S BEAUTY SERIES</div>
+        <div style="font-family:'Noto Sans TC',sans-serif;font-size:9px;letter-spacing:0.25em;color:var(--sage);opacity:0.45;margin-top:12px">RUEILIN BIOTECH · TAIWAN</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Parent brand logotype -->
+  <div style="margin-top:28px">
+    <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;color:var(--gray-warm);text-transform:uppercase;margin-bottom:14px">母品牌標準字方向 Parent Brand Logotype</div>
+    <div class="logo-demo logo-demo-dark">
+      <div class="logo-demo-label">Rueilin Biotech — Parent Brand Logotype Mockup</div>
+      <div class="logotype-parent">Rueilin</div>
+      <div class="logotype-parent-cn">瑞　霖　生　技</div>
+      <div class="logotype-parent-sub">BIOTECH WORKSHOP · TAIWAN · EST. —</div>
+    </div>
+    <div style="font-size:11px;font-weight:300;color:var(--charcoal-mid);line-height:2;margin-top:12px">
+      母品牌 Logo 建議以英文「Rueilin」為視覺主體，採用 Cormorant Garamond Light，搭配中文「瑞霖生技」以細宋體極大字距輔助，下方以微小字距的無衬線字體標示品牌資訊。整體呈現國際精品感，適用於外銷包裝、品牌形象頁及展覽物料。
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: 07 商品包裝 ═══ -->
+<div class="page">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">07</span>
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-tag">Packaging Visual Strategy</span>
+  </div>
+  <div class="section-title">四款商品包裝視覺策略</div>
+  <div class="section-title-en">Product Packaging Visual Direction</div>
+
+  <div class="section-body">
+    四款商品分屬「纖世代」及「夏姬」兩大系列，包裝在共用母版版型結構下，以系列識別色與主視覺插圖做差異化。以下為各商品的設計策略建議。
+  </div>
+
+  <div class="grid-2" style="gap:20px">
+
+    <!-- 玫瑰油切茶 -->
+    <div class="pack-concept">
+      <div class="pack-visual" style="background:linear-gradient(135deg,#F5E8ED 0%,#EDD5DC 100%)">
+        <div style="text-align:center;display:flex;align-items:center;justify-content:center;height:100%">
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.3em;color:var(--rose-deep);margin-bottom:8px">FIBRA</div>
+            <!-- Box illustration -->
+            <div style="width:90px;height:110px;background:rgba(196,116,138,0.18);border:1px solid rgba(196,116,138,0.35);border-radius:3px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:10px 8px;position:relative;box-shadow:4px 4px 0 rgba(196,116,138,0.12)">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--rose-deep);letter-spacing:0.12em;font-weight:400">FIBRA</div>
+              <div style="width:40px;height:36px;border:1px solid rgba(154,64,96,0.2);border-radius:50%;opacity:0.5"></div>
+              <div style="font-size:7px;color:var(--rose);letter-spacing:0.15em;text-align:center">玫瑰油切茶</div>
+            </div>
+            <div style="font-size:8px;letter-spacing:0.15em;color:var(--rose);margin-top:8px">ROSE · OIL-CUT TEA</div>
+          </div>
+        </div>
+      </div>
+      <div class="pack-info">
+        <div class="pack-series-name" style="color:var(--rose)">FIBRA · 纖世代</div>
+        <div class="pack-product-name">玫瑰油切茶</div>
+        <div class="pack-details">
+          包裝形式：彩盒（折疊紙盒）<br>
+          主視覺：玫瑰花瓣水彩插圖<br>
+          色系：裸米白底 + 玫瑰茶粉<br>
+          工藝：霧面啞光膜 + 玫瑰金局部燙印<br>
+          調性：浪漫、輕盈、日系輕奢<br>
+          目標：30–50 歲體態管理女性<br>
+          售價：$870
+        </div>
+      </div>
+    </div>
+
+    <!-- 紅景天 -->
+    <div class="pack-concept">
+      <div class="pack-visual" style="background:linear-gradient(135deg,#1C3230 0%,#2A1A18 100%)">
+        <div style="text-align:center;display:flex;align-items:center;justify-content:center;height:100%">
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.3em;color:var(--gold);margin-bottom:8px">ARCHANGEL</div>
+            <!-- Box illustration -->
+            <div style="width:90px;height:110px;background:rgba(140,58,48,0.25);border:1px solid rgba(191,160,122,0.35);border-radius:3px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:10px 8px;position:relative;box-shadow:4px 4px 0 rgba(0,0,0,0.2)">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:12px;color:var(--gold-light);letter-spacing:0.1em;font-weight:400">ARCHANGEL</div>
+              <div style="width:36px;height:36px;border:1px solid rgba(191,160,122,0.3);transform:rotate(45deg);opacity:0.5"></div>
+              <div style="font-size:7px;color:var(--gold);letter-spacing:0.12em;text-align:center">西藏大花紅景天</div>
+            </div>
+            <div style="font-size:8px;letter-spacing:0.15em;color:var(--gold);margin-top:8px">RHODIOLA · ROSEA</div>
+          </div>
+        </div>
+      </div>
+      <div class="pack-info">
+        <div class="pack-series-name" style="color:var(--crimson)">ARCHANGEL · 大天使</div>
+        <div class="pack-product-name">西藏大花紅景天</div>
+        <div class="pack-details">
+          包裝形式：彩盒（精裱硬殼盒或折疊紙盒）<br>
+          主視覺：西藏山脈線稿 / 紅景天植物<br>
+          色系：深森綠底 + 藏紅 + 金色燙印<br>
+          工藝：深色啞光膜 + 金色燙印 + 可加壓紋<br>
+          調性：力量、莊嚴、珍稀感<br>
+          目標：45–60 歲熟齡保健客群<br>
+          售價：$2,200
+        </div>
+      </div>
+    </div>
+
+    <!-- 不要逗留 -->
+    <div class="pack-concept">
+      <div class="pack-visual" style="background:linear-gradient(135deg,#E3EDE8 0%,#D0E2DA 100%)">
+        <div style="text-align:center;display:flex;align-items:center;justify-content:center;height:100%">
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.3em;color:var(--sage);margin-bottom:8px">XIAJI</div>
+            <!-- Box illustration -->
+            <div style="width:90px;height:110px;background:rgba(90,122,106,0.12);border:1px solid rgba(90,122,106,0.3);border-radius:3px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:10px 8px;position:relative;box-shadow:4px 4px 0 rgba(90,122,106,0.1)">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--sage);letter-spacing:0.12em;font-style:italic">XIAJI</div>
+              <div style="width:38px;height:38px;border-radius:50%;border:1px solid rgba(90,122,106,0.25);opacity:0.6"></div>
+              <div style="font-size:7px;color:var(--sage);letter-spacing:0.1em;text-align:center">不　要　逗　留</div>
+            </div>
+            <div style="font-size:8px;letter-spacing:0.15em;color:var(--sage-mid);margin-top:8px">CLEAR SKIN · FORMULA</div>
+          </div>
+        </div>
+      </div>
+      <div class="pack-info">
+        <div class="pack-series-name" style="color:var(--sage)">XIAJI · 夏姬</div>
+        <div class="pack-product-name">不要逗留膠囊</div>
+        <div class="pack-details">
+          包裝形式：彩盒（折疊紙盒）<br>
+          主視覺：清爽幾何線條 + 漢方植物細線稿<br>
+          色系：薄荷蒼綠 + 裸米白<br>
+          工藝：霧面消光膜 + 薄荷綠色帶識別<br>
+          調性：清透、科學感、快速<br>
+          目標：12–40 歲（廣幅女性）<br>
+          售價：$2,200
+        </div>
+      </div>
+    </div>
+
+    <!-- 膠原蛋白 -->
+    <div class="pack-concept">
+      <div class="pack-visual" style="background:linear-gradient(135deg,#F5EDE0 0%,#EDE0CC 100%)">
+        <div style="text-align:center;display:flex;align-items:center;justify-content:center;height:100%">
+          <div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.3em;color:var(--amber-mid);margin-bottom:8px">XIAJI</div>
+            <!-- Box illustration -->
+            <div style="width:90px;height:110px;background:rgba(200,168,130,0.1);border:1px solid rgba(200,168,130,0.35);border-radius:3px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:10px 8px;position:relative;box-shadow:4px 4px 0 rgba(200,168,130,0.15)">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--amber-mid);letter-spacing:0.12em;font-style:italic">XIAJI</div>
+              <div style="font-size:9px;color:var(--amber-mid);letter-spacing:0.08em;text-align:center;opacity:0.6;line-height:1.6">100%<br>PURE</div>
+              <div style="font-size:7px;color:var(--amber-mid);letter-spacing:0.1em;text-align:center">膠原蛋白</div>
+            </div>
+            <div style="font-size:8px;letter-spacing:0.15em;color:var(--amber-mid);margin-top:8px">PURE · COLLAGEN</div>
+          </div>
+        </div>
+      </div>
+      <div class="pack-info">
+        <div class="pack-series-name" style="color:var(--amber-mid)">XIAJI · 夏姬</div>
+        <div class="pack-product-name">100% 純淨膠原蛋白</div>
+        <div class="pack-details">
+          包裝形式：彩盒（折疊紙盒）<br>
+          主視覺：透明感極簡設計，無圖形<br>
+          色系：透明金 + 裸米白（純粹感）<br>
+          工藝：霧面消光膜 + 金色壓紋線條<br>
+          調性：純粹、無添加、奢華靜謐<br>
+          目標：45–55 歲熟齡美容女性<br>
+          售價：$1,870
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="highlight-bar" style="margin-top:24px">
+    <strong>彩盒版型統一策略：</strong>四款商品建議共用相同的彩盒版型結構規範（正面：母品牌 Logo 位置 / 系列標準字 / 商品名 / 核心插圖區 / 一句賣點；背面：成分說明 / 使用方式 / 規格資訊；側面：品牌 Logo + 條碼），僅替換正面主視覺插圖、主色系識別色帶與系列文字，確保上架陳列時系列感一眼可辨，個品識別同樣清晰。彩盒工藝建議統一採霧面消光膜底，局部玫瑰金燙印作為跨系列統一的品牌質感標誌。
+  </div>
+</div>
+
+<!-- ═══ PAGE: 08 設計語彙 ═══ -->
+<div class="page">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">08</span>
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-tag">Design Language</span>
+  </div>
+  <div class="section-title">包裝設計語彙要素</div>
+  <div class="section-title-en">Packaging Design Vocabulary</div>
+
+  <div class="section-body">
+    以下六個設計語彙要素共同構成瑞霖生技的視覺語言系統，所有設計師在進行任何品牌物料時，應以此作為設計決策的依據與品質標準。
+  </div>
+
+  <div class="grid-2" style="gap:16px;margin-bottom:24px">
+
+    <div class="card">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;color:var(--gold);margin-bottom:10px;text-transform:uppercase">插圖風格</div>
+      <div style="font-size:15px;font-weight:400;color:var(--forest);margin-bottom:6px">植萃線稿 × 淡彩水彩</div>
+      <div style="font-size:13px;font-weight:300;color:var(--charcoal-mid);line-height:1.9">
+        以手繪風格的植物線稿為主視覺基礎，局部填入淡彩水彩效果。線條精細但不失溫度，避免電腦感過強的幾何插圖。每個系列選取 2–3 種核心植物元素，確保視覺記憶點清晰。
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;color:var(--gold);margin-bottom:10px;text-transform:uppercase">材質感</div>
+      <div style="font-size:15px;font-weight:400;color:var(--forest);margin-bottom:6px">霧面消光膜 × 局部燙印</div>
+      <div style="font-size:13px;font-weight:300;color:var(--charcoal-mid);line-height:1.9">
+        彩盒整體採霧面消光膜處理，避免亮面廉價感。品牌標準字與裝飾線條採玫瑰金局部燙印或 UV 點光，製造光感對比。高端款商品（如紅景天 $2,200）可考慮 embossing 局部立體壓紋，提升手感質感。
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;color:var(--gold);margin-bottom:10px;text-transform:uppercase">造型語言</div>
+      <div style="font-size:15px;font-weight:400;color:var(--forest);margin-bottom:6px">修長盒型 × 有機構圖</div>
+      <div style="font-size:13px;font-weight:300;color:var(--charcoal-mid);line-height:1.9">
+        建議選用修長比例的彩盒尺寸，直式盒型在陳列架上更具視覺高度感，也更符合女性保健品的優雅感受。盒面版面的線條語言結合有機曲線（植物感）與幾何直線（科學感），呼應「智者 × 守護者」的品牌人格張力。
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;color:var(--gold);margin-bottom:10px;text-transform:uppercase">留白比例</div>
+      <div style="font-size:15px;font-weight:400;color:var(--forest);margin-bottom:6px">高端留白 × 以稀為貴</div>
+      <div style="font-size:13px;font-weight:300;color:var(--charcoal-mid);line-height:1.9">
+        正面包裝視覺元素不超過 5 個。每個元素之間給予充足的視覺呼吸空間。避免資訊堆疊，詳細成分與規格資訊移至背面或側面，正面僅保留最核心的品牌主張與視覺識別。
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;color:var(--gold);margin-bottom:10px;text-transform:uppercase">效能標示方式</div>
+      <div style="font-size:15px;font-weight:400;color:var(--forest);margin-bottom:6px">品牌語氣 × 去廣告感</div>
+      <div style="font-size:13px;font-weight:300;color:var(--charcoal-mid);line-height:1.9">
+        「30 分鐘有效」「3 天可感受」等核心賣點，以極細小字的設計感排版呈現，而非廣告標語語氣。語言模式參考高端保健品：事實陳述而非情緒渲染，讓美容師作為推薦者時不感到壓力。
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;color:var(--gold);margin-bottom:10px;text-transform:uppercase">外銷版本規劃</div>
+      <div style="font-size:15px;font-weight:400;color:var(--forest);margin-bottom:6px">中英雙語 × 國際版型</div>
+      <div style="font-size:13px;font-weight:300;color:var(--charcoal-mid);line-height:1.9">
+        建議一開始即規劃「台灣版」與「國際版」兩套包裝文字系統，共用視覺版型，替換語言文字。東南亞版本以英文為主，視市場需求加入馬來文、越南文。避免後期改版的額外成本。
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note-box">
+    <div class="note-box-label">設計禁忌 Design Don'ts</div>
+    <p>
+      ✗ 避免過多紅色或書法字，以免與台灣傳統保健品形象混淆<br>
+      ✗ 避免密集的中文資訊排版在彩盒正面<br>
+      ✗ 避免使用廉價感的亮面膜或鮮豔對比色<br>
+      ✗ 避免使用過多字體，每款彩盒字體種類不超過 3 種<br>
+      ✗ 避免插圖風格與照片混用在同一件彩盒設計上<br>
+      ✗ 避免彩盒正面資訊過量，核心視覺元素控制在 5 個以內
+    </p>
+  </div>
+</div>
+
+<!-- ═══ PAGE: 09 品牌參考 ═══ -->
+<div class="page">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">09</span>
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-tag">Brand Benchmarks</span>
+  </div>
+  <div class="section-title">品牌參考標竿</div>
+  <div class="section-title-en">Reference Brands & Benchmarks</div>
+
+  <div class="section-body">
+    以下四個品牌標竿從不同面向為瑞霖生技的視覺設計提供參考座標，設計時可針對個別商品的視覺策略，選取對應的標竿進行深度研究。
+  </div>
+
+  <div class="grid-2" style="gap:14px;margin-bottom:14px">
+
+    <div class="brand-ref">
+      <div class="brand-ref-name">雷文虎克</div>
+      <div class="brand-ref-region">台灣 ✕ 台大技轉精準保健品牌</div>
+      <div class="brand-ref-why">
+        台灣大學技術授權衍生的新創保健品牌，以腸道益生菌為核心，主打「科學可驗證、成分可溯源」的精準健康訴求。其包裝設計走乾淨現代路線，專業感與信任感兼備，是瑞霖在「智者品牌人格」視覺方向上最直接的本土對標——特別適合作為「大天使」系列在台灣醫療通路包裝語言的參考。
+      </div>
+      <div>
+        <span class="brand-ref-tag" style="background:var(--crimson-pale);color:var(--crimson)">大天使</span>
+        <span class="brand-ref-tag" style="background:var(--gold-pale);color:var(--amber-mid)">台灣醫療通路</span>
+      </div>
+    </div>
+
+    <div class="brand-ref">
+      <div class="brand-ref-name">葡眾</div>
+      <div class="brand-ref-region">台灣 ✕ 本土第一大直銷保健品牌</div>
+      <div class="brand-ref-why">
+        葡萄王生技旗下直銷品牌，台灣保健食品市占率前三，商品橫跨益生菌、膠原蛋白、機能飲品等品項，與瑞霖的產品矩陣高度重疊。研究葡眾的包裝系統，有助於理解台灣消費者對「本土保健品」的視覺期待基準，以及瑞霖需要如何在設計上做出差異化，避免被歸類為同一等級。
+      </div>
+      <div>
+        <span class="brand-ref-tag" style="background:var(--sage-pale);color:var(--sage)">夏姬系列</span>
+        <span class="brand-ref-tag" style="background:var(--rose-pale);color:var(--rose-deep)">纖世代</span>
+        <span class="brand-ref-tag" style="background:var(--gold-pale);color:var(--amber-mid)">競品差異化參考</span>
+      </div>
+    </div>
+
+    <div class="brand-ref">
+      <div class="brand-ref-name">OLVEL</div>
+      <div class="brand-ref-region">立陶宛 ✕ 歐洲保健品系統化設計典範</div>
+      <div class="brand-ref-why">
+        由立陶宛設計工作室 Great & Golden 操刀的私有保健品牌，以網格色塊系統管理超過 50 個 SKU、15 個品項分類，是全球保健品包裝「系統化設計」的代表案例。其核心設計哲學「讓消費者在複雜的保健世界中輕鬆導航」，正是瑞霖三大系列跨商品管理需要學習的設計架構——用色彩與網格邏輯建立系列識別，而非靠單一商品的視覺強烈感。
+      </div>
+      <div>
+        <span class="brand-ref-tag" style="background:var(--forest);color:var(--gold)">三大系列系統架構參考</span>
+        <span class="brand-ref-tag" style="background:var(--gold-pale);color:var(--amber-mid)">外銷設計語言</span>
+      </div>
+    </div>
+
+    <div class="brand-ref">
+      <div class="brand-ref-name">Kinohimitsu</div>
+      <div class="brand-ref-region">新加坡 ✕ 東南亞頂尖保健品</div>
+      <div class="brand-ref-why">
+        東南亞最具影響力的功能性保健品牌之一，在馬來西亞、越南等市場具強大品牌力。直接研究其包裝如何在亞洲女性審美下呈現高端感，是瑞霖東南亞外銷策略的最重要競品參考。
+      </div>
+      <div>
+        <span class="brand-ref-tag" style="background:var(--forest);color:var(--gold)">外銷策略參考</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="highlight-bar">
+    <strong>核心原則提醒：</strong>參考標竿用於汲取設計語彙，而非模仿。瑞霖生技需要發展屬於自己的獨特視覺語言，在「台灣漢方溫度」與「國際精品質感」之間找到品牌自己的平衡點，這正是本次設計專案最重要的創意核心任務。
+  </div>
+</div>
+
+<!-- ═══ PAGE: 10 執行建議 ═══ -->
+<div class="page">
+  <div class="section-eyebrow">
+    <span class="eyebrow-num">10</span>
+    <span class="eyebrow-line"></span>
+    <span class="eyebrow-tag">Execution Roadmap</span>
+  </div>
+  <div class="section-title">後續執行建議與里程碑</div>
+  <div class="section-title-en">Next Steps & Project Milestones</div>
+
+  <div class="section-body">
+    建議以「確認品牌視覺核心語彙 → 母品牌 Logo 定稿 → 三大系列標準字設計 → 選定一款商品做母版包裝設計 → 延伸四款包裝」的順序推進，確保每個階段有明確的共識基礎再進入下一步。
+  </div>
+
+  <div style="margin-bottom:36px">
+
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <div class="step-title">確認品牌英文名稱與字體方向</div>
+        <div class="step-desc">確定「Rueilin Biotech」是否為最終品牌英文名，並完成 2–3 個字體組合方案提案（建議包含 Cormorant Garamond、Playfair Display 各一個方向）。業主從中選定主視覺字體作為後續所有設計的基石。</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <div class="step-title">三大系列標準字設計提案</div>
+        <div class="step-desc">以確定的母品牌字體為基礎，分別為「纖世代 FIBRA」、「大天使 ARCHANGEL」、「夏姬 XIAJI」各提出 2–3 個標準字設計方向，每個方向包含英文標準字、中文標準字及英中組合排版的初稿。</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <div class="step-title">色彩系統與插圖風格確認</div>
+        <div class="step-desc">依本報告書建議的色彩架構，提供實際色票確認（含霧面材質打樣的顏色參考），並確定植物插圖風格（手繪線稿量、水彩疊色量、最終色調感）。建議在此階段提供插圖情境板（moodboard）。</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <div class="step-title">選定一款商品製作母版包裝設計</div>
+        <div class="step-desc">建議以「大天使 · 紅景天」（$2,200 高價品）作為母版，因其定位最明確，視覺挑戰性最高，且一旦定稿可有效引領其他三款的設計方向。完成正面、背面、側面的完整包裝設計，並送打樣確認材質效果。</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <div class="step-title">延伸四款完整包裝設計</div>
+        <div class="step-desc">以母版包裝為設計骨架，依各商品系列調整插圖、色系與核心文案，完成四款商品的完整包裝設計稿。確認台灣版與國際版文字差異，確保後續外銷版本切換的便利性。</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">6</div>
+      <div class="step-content">
+        <div class="step-title">品牌視覺規範手冊（Brand Guidelines）建立</div>
+        <div class="step-desc">完成包裝設計後，建議整理成完整的品牌視覺規範文件，內容包含：Logo 使用規範、色彩系統規格、字體使用規範、包裝版型規範，供未來新品開發、外部印刷廠及東南亞合作夥伴使用。</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="grid-2" style="gap:16px">
+    <div class="card card-ivory">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;color:var(--forest);margin-bottom:12px;text-transform:uppercase">台灣美容通路優先事項</div>
+      <div style="font-size:13px;font-weight:300;color:var(--charcoal-mid);line-height:2">
+        · 美容工作室陳列視覺美感優先<br>
+        · 美容師推薦的專業感包裝語言<br>
+        · 中文說明簡潔可信<br>
+        · 霧面材質優先於亮面<br>
+        · 建議附品牌簡介卡給美容師
+      </div>
+    </div>
+
+    <div class="card" style="background:var(--forest)">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;color:var(--gold);margin-bottom:12px;text-transform:uppercase">東南亞外銷優先事項</div>
+      <div style="font-size:13px;font-weight:300;color:rgba(245,239,230,0.8);line-height:2">
+        · 英文品牌名與系列名設計感優先<br>
+        · 「Made in Taiwan」作為信任背書<br>
+        · 包裝文字規劃國際版替換系統<br>
+        · 色彩調性符合東南亞女性審美<br>
+        · 避免台灣本土感過強的設計語言
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<div class="page-footer">
+  <div class="footer-brand">Rueilin Biotech · 瑞霖生技工坊</div>
+  <div class="footer-meta">品牌設計風格定位建議報告書 · V1.0 Draft · 製作：鹿氏設計 Mooser Design · 2025</div>
+</div>
+
+</body>
+</html>
